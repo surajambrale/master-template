@@ -1,0 +1,16 @@
+.reader {
+  position: relative;
+}
+
+/* 🔥 WATERMARK STYLE */
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  z-index: 10;
+  white-space: nowrap;
+}

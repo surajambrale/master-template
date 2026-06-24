@@ -1,0 +1,26 @@
+<div *ngIf="allowed; else loading" class="reader" (contextmenu)="$event.preventDefault()">
+
+  <h2>📖 Book Reading</h2>
+
+  <!-- 🔥 WATERMARK -->
+  <div class="watermark">
+    {{ user?.name }} - {{ user?.phone }}
+  </div>
+
+  <!-- 🔥 PDF VIEWER (NO DOWNLOAD BUTTON) -->
+  <pdf-viewer 
+    [src]="pdfUrl"
+    [render-text]="true"
+    [original-size]="false"
+    style="display: block; height: 80vh;">
+  </pdf-viewer>
+
+  <br>
+
+  <button (click)="logout()">Logout</button>
+
+</div>
+
+<ng-template #loading>
+  <h3>Checking access...</h3>
+</ng-template>

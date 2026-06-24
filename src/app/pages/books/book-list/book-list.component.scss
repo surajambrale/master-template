@@ -1,0 +1,294 @@
+.book-list {
+  padding: 20px;
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .book-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  .book-card {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #f8f8f8;
+    }
+
+    .image {
+      img {
+        width: 80px;
+        height: 110px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+
+    .info {
+      flex: 1;
+
+      h3 {
+        font-size: 16px;
+        margin: 0;
+      }
+
+      .author {
+        font-size: 13px;
+        color: #555;
+      }
+
+      .rating {
+        font-size: 13px;
+        color: #ff9900;
+      }
+
+      // .price {
+      //   font-weight: bold;
+      //   margin-top: 4px;
+      //   color: green;
+      // }
+
+//       .discount {
+//   font-size: 12px;
+//   color: #dc2626;
+//   font-weight: 600;
+// }
+
+      .price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #16a34a; // 🔥 green offer price
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .original-price {
+    font-size: 14px;
+    color: #888;
+
+    text-decoration: line-through; // 🔥 cut effect
+  }
+}
+    }
+  }
+}
+
+
+//whatsapp robot code
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+
+  /* Smooth hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Pulse animation */
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-float img {
+  width: 50px;
+  height: 50px;
+
+  /* thoda smooth feel */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect (attractive but not over) */
+.whatsapp-float:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.whatsapp-float:hover img {
+  transform: scale(1.1);
+}
+
+/* Pulse animation (light effect) */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+
+//Ai bot scss start
+
+/* BOT ICON */
+.fitness-bot-icon {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  background: #ff3c00;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  z-index: 9999;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* CHAT BOX */
+.fitness-chat {
+
+  position: fixed;
+  bottom: 160px;
+  right: 20px;
+
+  width: 320px;
+  height: 450px;
+
+  background: #111;
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* HEADER */
+.chat-header {
+
+  background: #eef123;
+  color: rgb(14, 12, 12);
+
+  padding: 15px;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* BODY */
+.chat-body {
+
+  flex: 1;
+
+  padding: 15px;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* BOT MESSAGE */
+.bot-msg {
+
+  background: #222;
+
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  width: fit-content;
+  max-width: 90%;
+}
+
+/* INPUT */
+.chat-input {
+
+  display: flex;
+  gap: 10px;
+
+  padding: 12px;
+
+  background: #1a1a1a;
+}
+
+.chat-input input,
+.chat-input select {
+
+  flex: 1;
+
+  padding: 10px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 8px;
+}
+
+.chat-input button {
+
+  background: #ff3c00;
+  color: white;
+
+  border: none;
+
+  padding: 10px 16px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.user-msg {
+
+  background: #f3ec1e;
+
+  color: rgb(16, 4, 4);
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  width: fit-content;
+
+  max-width: 90%;
+
+  align-self: flex-end;
+
+  margin-left: auto;
+}
+
+//Ai bot scss start

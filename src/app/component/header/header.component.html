@@ -1,0 +1,37 @@
+<!-- <header class="navbar" [class.scrolled]="isScrolled()">
+    <div class="logo">E-books</div>
+
+    <nav class="nav-links">
+
+        <a href="#home">Home</a>
+        
+    </nav>
+
+    <div class="hamburger" (click)="toggleSidebar()">
+       &#9776;
+    </div>
+
+</header> -->
+
+<header class="navbar" [class.scrolled]="isScrolled()">
+
+    <div class="logo">
+        <img src="assets/images/logo.PNG" alt="logo">
+        <span>E-books</span>
+    </div>
+
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+    </nav>
+
+    <div class="hamburger" (click)="toggleSidebar()">
+       &#9776;
+    </div>
+
+</header>
+
+<app-sidebar
+  *ngIf="isMobile()"
+  [isOpen]="isSidebarOpen()"
+  [closeSidebar]="closeSidebar"
+/>

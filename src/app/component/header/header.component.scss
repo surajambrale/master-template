@@ -1,0 +1,98 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    // background-color: #0a0a0a;
+      background: linear-gradient(to right, #0d0c0c, #060606);
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(49, 48, 48, 0.9);
+  
+    &.scrolled {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+  
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+  
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  
+    @media (max-width: 768px) {
+
+      .nav-links {
+        display: none;
+       
+      }
+  
+      .hamburger {
+        display: block;
+      }
+    }
+  }
+
+  //logo code
+//   .logo {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+//   font-size: 22px;
+//   font-weight: bold;
+// }
+
+/* Circle logo */
+// .logo img {
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50%;   
+//   object-fit: cover;    
+//   border: 2px solid #f5f8f6; 
+// }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: bold;
+
+  /* Circle logo */
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    padding: 2px; /* border thickness */
+    background: linear-gradient(45deg, #ffd700, #ffffff);
+
+    /* image ko andar properly show karne ke liye */
+    box-sizing: border-box;
+  }
+}
+
