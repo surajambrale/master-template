@@ -28,8 +28,6 @@ app.use(cors({
 app.use(express.json());
 
 const SECRET = process.env.JWT_SECRET;
-// const ADMIN_PASSWORD = "admin123";
-// const ADMIN_PASSWORD = "swami-sai-(],1403()/,";
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 // notification bot code start
@@ -262,19 +260,10 @@ app.post('/login', async (req, res) => {
 });
 
 
-// ================= PAYMENT =================
-
-//test key
-// const razorpay = new Razorpay({
-//   key_id: "rzp_test_STqAGoxV34Jsne",
-//   key_secret: "bfoAQJK911f9COnmbCndvYk5"
-// });
-//test key
-
 //live key
 const razorpay = new Razorpay({
-  key_id: "rzp_live_SWeBwjvwGx2bSP",
-  key_secret: "B1sb1uMvujMNwnGJ5aSlHx5Z"
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_SECRET
 });
 //live key
 
@@ -310,8 +299,7 @@ app.post('/verify-payment', async (req, res) => {
 
 
     const expectedSignature = crypto
-      // .createHmac("sha256", "B1sb1uMvujMNwnGJ5aSlHx5Z")  //testing key. "secret key".
-      .createHmac("sha256", process.env.RAZORPAY_SECRET)  //live key. "secret key" add karna hai ider.
+      .createHmac("sha256", process.env.RAZORPAY_SECRET)  
       .update(body.toString())
       .digest("hex");
 
