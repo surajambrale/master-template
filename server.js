@@ -19,8 +19,8 @@ const nodemailer = require('nodemailer');
 app.use(cors({
   origin: [
     'http://localhost:4200',
-    'https://ebookapp-gold.vercel.app' ,
-     'https://ebookapp.onrender.com'// 🔴 CHANGE THIS
+    'https://master-template-sigma.vercel.app' ,
+     'https://master-template.onrender.com'// 🔴 CHANGE THIS
   ],
   credentials: true
 }));
