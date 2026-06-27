@@ -16,11 +16,20 @@ const nodemailer = require('nodemailer');
 //gmail code end
 
 // 🔐 CORS (IMPORTANT 🔥)
+// app.use(cors({
+//   origin: [
+//     'http://localhost:4200',
+//     'https://master-template-sigma.vercel.app' ,
+//      'https://master-template.onrender.com'
+//   ],
+//   credentials: true
+// }));
+
 app.use(cors({
   origin: [
-    'http://localhost:4200',
-    'https://master-template-sigma.vercel.app' ,
-     'https://master-template.onrender.com'// 🔴 CHANGE THIS
+    process.env.LOCAL_HOST_URL,
+    process.env.VERCEL_URL,
+    process.env.RENDER_URL
   ],
   credentials: true
 }));
